@@ -9,10 +9,11 @@ Folder contents:
 
 ## What this setup will do
 
-1. Script moves the following:
-- copies the contents into the dropbox folder
-- move the contents into a created "meshes" folder (inside the original "HospitalModel" folder)
+1. Manipulate folders:
+- copies the contents into the specified folder
+- move the contents into a created "meshes" folder
+- creates the sdf files based on the folder name
 
-2. Script manipulates the following:
+2. Edits the sdf files:
 - model.config
 - model.sdf
