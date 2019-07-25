@@ -1,0 +1,5 @@
+- copy folder into specified destination
+- create "meshes" folder
+- move everything into meshes
+- copy model.config and model.sdf into root
+- str.replace(change, FolderName)
