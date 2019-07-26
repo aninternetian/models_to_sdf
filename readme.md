@@ -17,3 +17,7 @@ Folder contents:
 2. Edits the sdf files:
 - model.config
 - model.sdf
+
+## How to use
+1. Change to directory `models_to_sdf/` 
+2. Run `models_to_sdf.py`
