@@ -1,5 +1,5 @@
-- copy folder into specified destination
-- create "meshes" folder
-- move everything into meshes
-- copy model.config and model.sdf into root
-- str.replace(change, FolderName)
+- user input folder to copy
+- use folder name (eg, `RoboCop`) to create a new folder with the same name
+- copy `model.config` and `model.sdf` into new `RoboCop`
+- create the `meshes` subdirectory
+- copy contents of original folder into meshes
