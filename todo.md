@@ -1,5 +1,7 @@
-- user input folder to copy
-- use folder name (eg, `RoboCop`) to create a new folder with the same name
-- copy `model.config` and `model.sdf` into new `RoboCop`
-- create the `meshes` subdirectory
-- copy contents of original folder into meshes
+- user input folder to copy `InputFolder`
+- user input folder to paste `OutputFolder`
+- use/point to `SourceFolder` for xml templates
+- make directory using the name of the `InputFolder`
+- copy contents from `SourceFolder` into `OutputFolder`
+- create the `meshes` subdirectory in `OutputFolder`
+- copy contents from `InputFolder` into `meshes`
