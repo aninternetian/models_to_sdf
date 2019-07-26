@@ -1,42 +1,41 @@
 import os
 import shutil
-
-## reference
-# Copy multiple files in Python - https://stackoverflow.com/questions/3397752/copy-multiple-files-in-python
+import argparse
 
 #-----
 
-## setup
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
 
-# def InputFolder():    # user input folder to copy
-# def OutputFolder():   # user input folder to paste
-# def SourceFolder():   # `/models_to_sdf/templates/`
+    _, all_arguments = parser.parse_known_args()
+    double_dash_index = all_arguments.index('--')
+    script_args = all_arguments[double_dash_index + 1:]
+
+    parser.add_argument('input', help='Input folder directory')
+    parser.add_argument('output', help='Output folder directory')
+    args, _ = parser.parse_known_args(script_args)
+
+#    bpy.ops.wm.open_mainfile(filepath=args.input)
 
 #-----
 
-## make directories
-os.makedirs('/OutputFolder/meshes')     # using name from InputFolder
+# templates
+termplatesDir = os.path.join(os.getcwd(), 'templates')
 
-#-----
+# mkdir
+os.makedirs('/OutputFolder/meshes')
 
-## copy stuff going on here
+# copies contents of one folder to another yay
+def CopyFiles(src, dest):
+    src_files = os.listdir(src)
+    for file_name in src_files:
+        full_file_name = os.path.join(src, file_name)
+        if os.path.isfile(full_file_name):
+            shutil.copy(full_file_name, dest)
 
-# def SdfCopy():     # copies sdf files
-src = '/models_to_sdf/templates/'
-dest = 'OutputFolder/'
+# sdf
+CopyFiles(termplatesDir, 'OutputFolder')
 
-src_files = os.listdir(src)
-for file_name in src_files:
-    full_file_name = os.path.join(src, file_name)
-    if os.path.isfile(full_file_name):
-        shutil.copy(full_file_name, dest)
-
-# def MeshesCopy():     # copy contents of original folder into meshes
-src = '/InputFolder/'
-dest = 'OutputFolder/meshes'
-
-src_files = os.listdir(src)
-for file_name in src_files:
-    full_file_name = os.path.join(src, file_name)
-    if os.path.isfile(full_file_name):
-        shutil.copy(full_file_name, dest)
+def MeshesCopy():
+    meshes = os.path.join('OutputFolder/', 'meshes')
+    CopyFiles('InputFolder()', meshes)
