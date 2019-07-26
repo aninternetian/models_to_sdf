@@ -1,7 +1,7 @@
 - user input folder to copy `InputFolder`
 - user input folder to paste `OutputFolder`
-- use/point to `SourceFolder` for xml templates
-- make directory using the name of the `InputFolder`
-- copy contents from `SourceFolder` into `OutputFolder`
-- create the `meshes` subdirectory in `OutputFolder`
-- copy contents from `InputFolder` into `meshes`
+- point to `SourceFolder` for xml templates
+- make a new directory using the name of the `InputFolder`
+- copy templates from `SourceFolder` into `OutputFolder`
+- create `meshes` subdirectory in `OutputFolder`
+- copy meshes from `InputFolder` into `meshes`
