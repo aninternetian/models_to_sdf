@@ -21,3 +21,6 @@
 - Copy multiple files in Python: https://stackoverflow.com/questions/3397752/copy-multiple-files-in-python
 - argparse things - https://stackoverflow.com/questions/51677207/argparse-input-and-output-directory
 - creating nested directories - https://stackoverflow.com/questions/273192/how-can-i-safely-create-a-nested-directory
+
+## Consider
+Create another version of this script which is a plugin instead
