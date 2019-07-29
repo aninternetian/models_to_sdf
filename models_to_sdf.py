@@ -14,9 +14,6 @@ output = args.output
 # retrieve name of input folder
 inputFolderName = os.path.basename(input)
 
-# SDF templates
-termplatesDir = os.path.join(os.getcwd(), 'templates')
-
 # create folders
 os.makedirs(inputFolderName)
 
@@ -28,10 +25,14 @@ def CopyFiles(input, output):
         if os.path.isfile(full_file_name):
             shutil.copy(full_file_name, output)
 
-# CopyFiles(termplatesDir, output)
-
 def MeshesCopy():
     meshes = os.path.join(output, 'meshes')
     CopyFiles(input, meshes)
 
 MeshesCopy()
+
+
+#----
+
+# termplatesDir = os.path.join(os.getcwd(), 'templates')
+# CopyFiles(termplatesDir, output)

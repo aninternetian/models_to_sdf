@@ -1,18 +1,19 @@
-## To-Do's
-
-Finished round 1: Template setup
-Currently at round 2: Getting code to testable conditions
-
+## First round
 - [x] user input folder to copy `InputFolder`
-- [x] user input folder to paste `OutputFolder`
-- [ ] create `meshes` subdirectory in `OutputFolder`
-- [x] copy meshes from `InputFolder` into `meshes`
+- [x] user input root folder to paste `OutputRootFolder`
 
-## Skip, for now
-- [ ] make a new directory using the name of the `InputFolder`
-- [ ] edit sdf files using name of the `InputFolder`
+## Second round
+- [ ] Create a new folder in the `OutputRootFolder`
+- [ ] That folder needs to have the same name as the `InputFolder`
+
+## Third round
+- [ ] create `meshes` subdirectory in `OutputFolder`
+- [ ] copy meshes from `InputFolder` into `meshes`
+
+## Last round
 - [ ] point to `SourceFolder` to use it for xml templates
 - [ ] copy templates from `SourceFolder` into `OutputFolder`
+- [ ] edit sdf files using name of the `InputFolder`
 
 ## References used
 - tutorial: https://realpython.com/working-with-files-in-python/

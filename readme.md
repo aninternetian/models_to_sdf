@@ -14,10 +14,8 @@ Folder contents:
 - move the contents into a created "meshes" folder
 
 ## How to use
-1. Create folder in the models directory
-2. Open a terminal from the `models_to_sdf/` directory
-3. Run `models_to_sdf.py`
+1. Open a terminal from the `models_to_sdf/` directory
+2. Run `models_to_sdf.py`
 
 ## To-dos
-- Create folder from the input folder name
-- Edit and write sdf from the input folder name
+- Create, edit and write sdf from the input folder name
