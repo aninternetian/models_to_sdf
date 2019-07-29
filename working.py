@@ -8,5 +8,7 @@ args = parser.parse_args()
 input = args.input       # /home/roselle/Documents/Prev/hospital/beds
 output = args.output    # /home/roselle/Documents/work/test/
 
-# directory = os.path.dirname(output)
-os.makedirs(output, '/beds')
+inputFolderName = os.path.basename(input)
+
+path = os.path.join(output, inputFolderName, 'meshes')
+os.makedirs(path)

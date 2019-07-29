@@ -3,11 +3,11 @@
 - [x] user input root folder to paste `OutputDirectory`
 
 ## Second round
-- [ ] Create a new folder in the `OutputRootFolder`
-- [ ] That folder needs to have the same name as the `InputFolder`
+- [x] Create a new folder in the `OutputRootFolder`
+- [x] That folder needs to have the same name as the `InputFolder`
 
 ## Third round
-- [ ] create `meshes` subdirectory in `OutputFolder`
+- [x] create `meshes` subdirectory in `OutputFolder`
 - [ ] copy meshes from `InputFolder` into `meshes`
 
 ## Last round

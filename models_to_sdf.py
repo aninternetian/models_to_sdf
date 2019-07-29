@@ -1,19 +1,26 @@
 import os
 import argparse
-
-# user input
+import shutil
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', help='Copy models and textures from exported folder', required = True)
 parser.add_argument('--output', help='Paste everything into folder', required = True)
 args = parser.parse_args()
-input = args.input       # /home/roselle/Documents/Prev/hospital/beds
-output = args.output    # /home/roselle/Documents/work/test/
+input = args.input       # ~/Documents/Prev/hospital/beds/CGMClassic
+output = args.output    # ~/Documents/work/test/
 
-# retrieve name of input folder
-inputFolderName = os.path.basename(input)       # beds
+inputFolderName = os.path.basename(input)
+print(inputFolderName)
 
-# create new folder in the output dir
-# output path
-directory = os.path.dirname(output)
-os.makedirs(directory, inputFolderName, '/meshes')
+meshesDir = os.path.join(output, inputFolderName, 'meshes')      # /home/roselle/Documents/work/test/beds/meshes
+os.makedirs(meshesDir)
+
+# copies contents of one folder to another yay
+def CopyFiles(input, output):
+    src_files = os.listdir(input)
+    for file_name in src_files:
+        full_file_name = os.path.join(input, file_name)
+        if os.path.isfile(full_file_name):
+            shutil.copy(full_file_name, output)
+
+CopyFiles(input, meshesDir)
