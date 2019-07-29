@@ -1,4 +1,3 @@
-import os
 import argparse
 
 # user input
@@ -9,12 +8,3 @@ parser.add_argument('--output', help='Paste everything into folder', required = 
 args = parser.parse_args()
 input = args.input
 output = args.output
-
-
-# retrieve name of input folder
-inputFolderName = os.path.basename(input)
-
-# create new folder in the output dir
-# output path
-directory = os.path.dirname(output)
-os.makedirs(directory, inputFolderName, '/meshes')

@@ -1,6 +1,6 @@
 ## First round
 - [x] user input folder to copy `InputFolder`
-- [x] user input root folder to paste `OutputRootFolder`
+- [x] user input root folder to paste `OutputDirectory`
 
 ## Second round
 - [ ] Create a new folder in the `OutputRootFolder`
