@@ -1,15 +1,17 @@
 ## To-Do's
 
-Currently at round 1:
-Template setup
+Finished round 1: Template setup
+Currently at round 2: Getting code to testable conditions
 
-- [ ] user input folder to copy `InputFolder`
-- [ ] user input folder to paste `OutputFolder`
+- [x] user input folder to copy `InputFolder`
+- [x] user input folder to paste `OutputFolder`
 - [x] point to `SourceFolder` to use it for xml templates
-- [x] make a new directory using the name of the `InputFolder`
 - [x] copy templates from `SourceFolder` into `OutputFolder`
 - [x] create `meshes` subdirectory in `OutputFolder`
 - [x] copy meshes from `InputFolder` into `meshes`
+
+## Skip, for now
+- [ ] make a new directory using the name of the `InputFolder`
 - [ ] edit sdf files
 
 ## References used

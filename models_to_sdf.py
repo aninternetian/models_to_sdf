@@ -2,40 +2,34 @@ import os
 import shutil
 import argparse
 
-#-----
+# user input
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser()
+parser.add_argument('--input', help='Copy models and textures from exported folder', required = True)
+parser.add_argument('--output', help='Paste everything into folder', required = True)    # don't need to create a new folder with the same name
+args = parser.parse_args()
+input = args.input
+output = args.output
 
-    _, all_arguments = parser.parse_known_args()
-    double_dash_index = all_arguments.index('--')
-    script_args = all_arguments[double_dash_index + 1:]
+# retrieve name of input folder
+inputFolderName = os.path.basename(input)
 
-    parser.add_argument('input', help='Input folder directory')
-    parser.add_argument('output', help='Output folder directory')
-    args, _ = parser.parse_known_args(script_args)
-
-#    bpy.ops.wm.open_mainfile(filepath=args.input)
-
-#-----
-
-# templates
+# SDF templates
 termplatesDir = os.path.join(os.getcwd(), 'templates')
 
-# mkdir
-os.makedirs('/OutputFolder/meshes')
-
 # copies contents of one folder to another yay
-def CopyFiles(src, dest):
-    src_files = os.listdir(src)
+def CopyFiles(input, output):
+    src_files = os.listdir(input)
     for file_name in src_files:
-        full_file_name = os.path.join(src, file_name)
+        full_file_name = os.path.join(input, file_name)
         if os.path.isfile(full_file_name):
-            shutil.copy(full_file_name, dest)
+            shutil.copy(full_file_name, output)
 
 # sdf
-CopyFiles(termplatesDir, 'OutputFolder')
+CopyFiles(termplatesDir, output)
 
 def MeshesCopy():
-    meshes = os.path.join('OutputFolder/', 'meshes')
-    CopyFiles('InputFolder()', meshes)
+    meshes = os.path.join(output, 'meshes')
+    CopyFiles(input, meshes)
+
+MeshesCopy()
