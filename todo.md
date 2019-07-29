@@ -5,14 +5,14 @@ Currently at round 2: Getting code to testable conditions
 
 - [x] user input folder to copy `InputFolder`
 - [x] user input folder to paste `OutputFolder`
-- [x] point to `SourceFolder` to use it for xml templates
-- [x] copy templates from `SourceFolder` into `OutputFolder`
-- [x] create `meshes` subdirectory in `OutputFolder`
+- [ ] create `meshes` subdirectory in `OutputFolder`
 - [x] copy meshes from `InputFolder` into `meshes`
 
 ## Skip, for now
 - [ ] make a new directory using the name of the `InputFolder`
-- [ ] edit sdf files
+- [ ] edit sdf files using name of the `InputFolder`
+- [ ] point to `SourceFolder` to use it for xml templates
+- [ ] copy templates from `SourceFolder` into `OutputFolder`
 
 ## References used
 - tutorial: https://realpython.com/working-with-files-in-python/

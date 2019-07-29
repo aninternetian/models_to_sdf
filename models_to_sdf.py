@@ -6,7 +6,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', help='Copy models and textures from exported folder', required = True)
-parser.add_argument('--output', help='Paste everything into folder', required = True)    # don't need to create a new folder with the same name
+parser.add_argument('--output', help='Paste everything into folder', required = True)
 args = parser.parse_args()
 input = args.input
 output = args.output
@@ -17,6 +17,9 @@ inputFolderName = os.path.basename(input)
 # SDF templates
 termplatesDir = os.path.join(os.getcwd(), 'templates')
 
+# create folders
+os.makedirs(inputFolderName)
+
 # copies contents of one folder to another yay
 def CopyFiles(input, output):
     src_files = os.listdir(input)
@@ -25,8 +28,7 @@ def CopyFiles(input, output):
         if os.path.isfile(full_file_name):
             shutil.copy(full_file_name, output)
 
-# sdf
-CopyFiles(termplatesDir, output)
+# CopyFiles(termplatesDir, output)
 
 def MeshesCopy():
     meshes = os.path.join(output, 'meshes')
