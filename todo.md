@@ -20,3 +20,4 @@
 - quick and easy os type references: https://www.bogotobogo.com/python/python_files.php
 - Copy multiple files in Python: https://stackoverflow.com/questions/3397752/copy-multiple-files-in-python
 - argparse things - https://stackoverflow.com/questions/51677207/argparse-input-and-output-directory
+- creating nested directories - https://stackoverflow.com/questions/273192/how-can-i-safely-create-a-nested-directory
