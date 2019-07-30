@@ -1,7 +1,7 @@
 import os
 import argparse
 import shutil
-import editSdf
+import xml.etree.ElementTree as ET
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', help='Copy models and textures from exported folder', required = True)
@@ -31,7 +31,20 @@ sdfDir = os.path.join(output, inputFolderName)
 
 CopyFiles(templatesDir, sdfDir)
 
+def replaceValue(path):
+    tree = ET.parse(path)
+    root = tree.getroot()
+
+    for elem in root.iter('model'):
+        if elem.get('name') is not None:
+            elem.set('name', inputFolderName)
+
+    for elem in root.getiterator():
+            elem.text = elem.text.replace('change', inputFolderName)
+
+    tree.write(path, xml_declaration=True, encoding='utf-8')
+
 sdfPath = os.path.join(sdfDir, 'model.sdf')
 configPath = os.path.join(sdfDir, 'model.config')
-editSdf.replaceValue(sdfPath)
-editSdf.replaceValue(configPath)
+replaceValue(sdfPath)
+replaceValue(configPath)
