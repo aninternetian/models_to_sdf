@@ -5,7 +5,7 @@ def replaceValue(path):
     tree = ET.parse(path)
     root = tree.getroot()
 
-    for elem in root.iter('model'):
+    for elem in root.iter('model'):     # only working for model.sdf
         elem.set('name', 'test')
 
     for elem in root.getiterator():
