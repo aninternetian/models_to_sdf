@@ -1,9 +1,11 @@
 import os
+import editSdf
 
-input = '~/Documents/Prev/hospital/beds/CGMClassic'
-output = '~/Documents/work/test/'
+input = '/home/roselle/Documents/Prev/hospital/beds/CGMClassic/'
+output = '/home/roselle/Documents/work/test/CGMClassic/'
 
 inputFolderName = os.path.basename(input)
-
 sdfDir = os.path.join(output, inputFolderName)
-print(sdfDir)
+
+sdfPath = os.path.join(sdfDir, 'model.sdf')
+editSdf.replaceValue(sdfPath)

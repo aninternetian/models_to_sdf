@@ -1,6 +1,7 @@
 import os
 import argparse
 import shutil
+import editSdf
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', help='Copy models and textures from exported folder', required = True)
@@ -27,6 +28,10 @@ CopyFiles(input, meshesDir)
 templatesDir = os.path.join(os.getcwd(), 'templates')
 
 sdfDir = os.path.join(output, inputFolderName)
-print(sdfDir)
 
 CopyFiles(templatesDir, sdfDir)
+
+sdfPath = os.path.join(sdfDir, 'model.sdf')
+configPath = os.path.join(sdfDir, 'model.config')
+editSdf.replaceValue(sdfPath)
+editSdf.replaceValue(configPath)

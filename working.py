@@ -1,14 +1,15 @@
-import os
-import argparse
+import xml.etree.ElementTree as ET
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--input', help='Copy models and textures from exported folder', required = True)
-parser.add_argument('--output', help='Paste everything into folder', required = True)
-args = parser.parse_args()
-input = args.input       # /home/roselle/Documents/Prev/hospital/beds
-output = args.output    # /home/roselle/Documents/work/test/
+tree = ET.parse('model.config')
+root = tree.getroot()
 
-inputFolderName = os.path.basename(input)
+for elem in root.iter('model'):
+    elem.set('name', 'test')
 
-path = os.path.join(output, inputFolderName, 'meshes')
-os.makedirs(path)
+for elem in root.getiterator():
+    try:
+        elem.text = elem.text.replace('change', 'test')
+    except AttributeError:
+        pass
+
+tree.write('model.config', xml_declaration=True, encoding='utf-8')
