@@ -8,11 +8,11 @@
 
 ## Third round
 - [x] create `meshes` subdirectory in `OutputFolder`
-- [ ] copy meshes from `InputFolder` into `meshes`
+- [x] copy meshes from `InputFolder` into `meshes`
 
 ## Last round
-- [ ] point to `SourceFolder` to use it for xml templates
-- [ ] copy templates from `SourceFolder` into `OutputFolder`
+- [x] point to `SourceFolder` to use it for xml templates
+- [x] copy templates from `SourceFolder` into `OutputFolder`
 - [ ] edit sdf files using name of the `InputFolder`
 
 ## References used

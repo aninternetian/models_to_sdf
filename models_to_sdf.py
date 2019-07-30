@@ -10,7 +10,6 @@ input = args.input       # ~/Documents/Prev/hospital/beds/CGMClassic
 output = args.output    # ~/Documents/work/test/
 
 inputFolderName = os.path.basename(input)
-print(inputFolderName)
 
 meshesDir = os.path.join(output, inputFolderName, 'meshes')      # /home/roselle/Documents/work/test/beds/meshes
 os.makedirs(meshesDir)
@@ -24,3 +23,10 @@ def CopyFiles(input, output):
             shutil.copy(full_file_name, output)
 
 CopyFiles(input, meshesDir)
+
+templatesDir = os.path.join(os.getcwd(), 'templates')
+
+sdfDir = os.path.join(output, inputFolderName)
+print(sdfDir)
+
+CopyFiles(templatesDir, sdfDir)

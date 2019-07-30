@@ -1,4 +1,9 @@
 import os
 
-termplatesDir = os.path.join(os.getcwd(), 'templates')
-print(termplatesDir)
+input = '~/Documents/Prev/hospital/beds/CGMClassic'
+output = '~/Documents/work/test/'
+
+inputFolderName = os.path.basename(input)
+
+sdfDir = os.path.join(output, inputFolderName)
+print(sdfDir)
