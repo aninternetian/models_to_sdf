@@ -17,7 +17,7 @@
 
 ## Round five
 - [x] edit sdf files
-- [ ] edit two xml files at a time
+- [x] edit two xml files at a time
 - [ ] change string to `InputFolder`
 - [ ] figure out `__pycache__`
 

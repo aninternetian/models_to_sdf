@@ -1,15 +1,9 @@
 import editSdf
 import os
 
-input = '~/models_to_sdf/templates'
-output = '/home/roselle/Documents/work/test/
+path = '/home/roselle/Documents/work/test/CGMClassic/model.config'
 
-inputFolderName = os.path.basename(input)
-
-sdfDir = os.path.join(output, inputFolderName)
-
-sdfPath = os.path.join(sdfDir, 'model.sdf')
-editSdf.replaceValue(sdfPath)
+editSdf.replaceValue(path)
 
 #configPath = os.path.join(sdfDir, 'model.config')
 #editSdf.replaceValue(configPath)
