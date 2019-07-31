@@ -7,29 +7,31 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--input', help='Copy models and textures from exported folder', required = True)
 parser.add_argument('--output', help='Paste everything into folder', required = True)
 args = parser.parse_args()
-input = args.input       # ~/Documents/Prev/hospital/beds/CGMClassic
-output = args.output    # ~/Documents/work/test/
+folderInput = args.input
+folderOutput = args.output
 
-inputFolderName = os.path.basename(input)
+inputFolderName = os.path.basename(folderInput)
 
-meshesDir = os.path.join(output, inputFolderName, 'meshes')      # /home/roselle/Documents/work/test/beds/meshes
+meshesDir = os.path.join(folderOutput, inputFolderName, 'meshes')
 os.makedirs(meshesDir)
 
 # copies contents of one folder to another yay
-def CopyFiles(input, output):
-    src_files = os.listdir(input)
+def CopyFiles(usrInput, usrOutput):
+    src_files = os.listdir(usrInput)
     for file_name in src_files:
-        full_file_name = os.path.join(input, file_name)
+        full_file_name = os.path.join(usrInput, file_name)
         if os.path.isfile(full_file_name):
-            shutil.copy(full_file_name, output)
+            shutil.copy(full_file_name, usrOutput)
 
-CopyFiles(input, meshesDir)
+CopyFiles(folderInput, meshesDir)
 
 templatesDir = os.path.join(os.getcwd(), 'templates')
 
-sdfDir = os.path.join(output, inputFolderName)
+sdfDir = os.path.join(folderOutput, inputFolderName)
 
 CopyFiles(templatesDir, sdfDir)
+
+## xml editing
 
 def replaceValue(path):
     tree = ET.parse(path)
