@@ -18,7 +18,7 @@ Folder contents:
 - edits the sdf to the name of the folder and models
 
 ## How to use
-Make sure your models and textures have the same name as the folder name
+Make sure your models and textures have the same name as the folder name and make sure the folder doesn't exist in the output directory.
 
 1. Open a terminal from the `models_to_sdf/` directory
 2. Run `models_to_sdf.py`
