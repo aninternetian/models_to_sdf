@@ -30,6 +30,9 @@ Your line should look something like this:
 python3 models_to_sdf.py --input ~/Documents/models/robots/sesto --output ~/Dropbox/models/
 ```
 
+## For windows users
+In case you come across any issues - https://stackoverflow.com/a/26616078
+
 ## To-dos
 - clean it up
 - get it to check if the folder exists or not
