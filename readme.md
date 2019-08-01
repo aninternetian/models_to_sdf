@@ -17,11 +17,7 @@ Folder contents:
 - Copies existing sdf from the script
 - edits the sdf to the name of the folder and models
 
-<<<<<<< HEAD
 ## How to use - Linux
-=======
-## How to use
->>>>>>> b8d11738d89abfa43c44f615cf85e710cd10c21f
 Make sure your models and textures have the same name as the folder name and make sure the folder doesn't exist in the output directory.
 
 1. Open a terminal from the `models_to_sdf/` directory
@@ -34,7 +30,6 @@ Your line should look something like this:
 python3 models_to_sdf.py --input ~/Documents/models/robots/sesto --output ~/Dropbox/models/
 ```
 
-<<<<<<< HEAD
 ## How to use - Windows
 
 1. Open a terminal from the `models_to_sdf\` directory
@@ -44,9 +39,6 @@ python3 models_to_sdf.py --input ~/Documents/models/robots/sesto --output ~/Drop
 ```
 py -3 models_to_sdf.py --input C:\Users\wanyi\Desktop\TUG --output C:\Users\wanyi\Desktop\fakedropbox
 ```
-=======
-## For windows users
->>>>>>> b8d11738d89abfa43c44f615cf85e710cd10c21f
 In case you come across any issues - https://stackoverflow.com/a/26616078
 
 ## To-dos
