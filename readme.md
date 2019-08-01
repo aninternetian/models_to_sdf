@@ -37,7 +37,7 @@ python3 models_to_sdf.py --input ~/Documents/models/robots/sesto --output ~/Drop
 3. Type in the `--input` directory where the models and textures are exported. Eg: `C:\Documents\models\robots\sesto`
 4. Type out the `--output` directory where the gazebo models are exported. Eg: `C:\Dropbox\models`
 ```
-py -3 models_to_sdf.py --input C:\Users\wanyi\Desktop\TUG --output C:\Users\wanyi\Desktop\fakedropbox
+py -3 models_to_sdf.py --input C:\Documents\models\robots\sesto --output C:\Dropbox\models
 ```
 In case you come across any issues - https://stackoverflow.com/a/26616078
 
