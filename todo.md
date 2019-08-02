@@ -19,7 +19,7 @@
 - [x] edit sdf files
 - [x] edit two xml files at a time
 - [x] change string to `InputFolder`
-- [ ] figure out `__pycache__`
+- [x] figure out `__pycache__`
 
 ## References used
 - try, except for copy/paste - https://gist.github.com/keithweaver/562d3caa8650eefe7f84fa074e9ca949
