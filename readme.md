@@ -38,6 +38,7 @@ python3 models_to_sdf.py --input ~/Documents/models/robots/sesto --output ~/Drop
 4. Type out the `--output` directory where the gazebo models are exported. Eg: `C:\Dropbox\models`
 ```
 py -3 models_to_sdf.py --input C:\Documents\models\robots\sesto --output C:\Dropbox\models
+
 ```
 In case you come across any issues - https://stackoverflow.com/a/26616078
 

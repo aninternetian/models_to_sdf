@@ -13,7 +13,15 @@ folderOutput = args.output
 inputFolderName = os.path.basename(folderInput)
 
 meshesDir = os.path.join(folderOutput, inputFolderName, 'meshes')
-os.makedirs(meshesDir)
+
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)
+        
+createFolder(meshesDir)
 
 # copies contents of one folder to another yay
 def CopyFiles(usrInput, usrOutput):
