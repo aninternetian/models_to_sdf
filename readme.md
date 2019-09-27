@@ -13,8 +13,9 @@
 Artist exports models with textures into one folder
 
 Folder contents:
-- Model mesh (supports .dae or .obj)
-- Collision model (low poly)
+- Model base meshes (supports .dae or .obj)
+- Model joints/wheels or parts meshes
+- Collision model meshes (low poly)
 - Model textures (recommended to use .png)
 
 Example folder might look like this:
@@ -22,9 +23,13 @@ Example folder might look like this:
 Sesto
 - Sesto.obj
 - Sesto.mtl
-- textures.png (can be any name)
 - Sesto_Col.obj
 - Sesto_Col.mtl
+- SestoWheel.obj
+- SestoWheel.mtl
+- SestoWheel_Col.obj
+- SestoWheel_Col.mtl
+- textures.png (can be any name)
 
 Take note of the above:
 - Model and folder has the same name.
