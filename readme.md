@@ -1,24 +1,37 @@
-## Example
-
-Artist exports models with textures
-
-Folder name: "HospitalModel"
-Folder contents:
-- model.dae or model.obj
-- model.jpg or model.png
-
 ## What this setup will do
 
 1. Manipulate folders:
-- copies the contents into the specified folder
+- copies contents from the original folder into the specified folder
 - move the contents into a created "meshes" folder
 
 2. Creates SDF templates based on the folder and model names
 - Copies existing sdf from the script
-- edits the sdf to the name of the folder and models
+- Edits the sdf to the name of the folder and models
+
+## Before using Example
+
+Artist exports models with textures into one folder
+
+Folder contents:
+- Model mesh (supports .dae or .obj)
+- Collision model (low poly)
+- Model textures (recommended to use .png)
+
+Example folder might look like this:
+
+Sesto
+- Sesto.obj
+- Sesto.mtl
+- textures.png (can be any name)
+- Sesto_Col.obj
+- Sesto_Col.mtl
+
+Take note of the above:
+- Model and folder has the same name.
+- Collision model has a `_Col` at the end of the name.
 
 ## How to use - Linux
-Make sure your models and textures have the same name as the folder name and make sure the folder doesn't exist in the output directory.
+Make sure this folder doesn't exist in the output directory.
 
 1. Open a terminal from the `models_to_sdf/` directory
 2. Type in `python3 models_to_sdf.py`
