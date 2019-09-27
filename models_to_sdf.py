@@ -52,6 +52,9 @@ def replaceValue(path):
     for elem in root.getiterator():
             elem.text = elem.text.replace('change', inputFolderName)
 
+    for elem in root.getiterator():
+            elem.text = elem.text.replace('_col', inputFolderName + '_Col')
+
     tree.write(path, xml_declaration=True, encoding='utf-8')
 
 sdfPath = os.path.join(sdfDir, 'model.sdf')

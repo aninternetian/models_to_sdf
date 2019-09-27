@@ -17,7 +17,7 @@
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>model://change/meshes/change.obj</uri>
+            <uri>model://_col/meshes/_col.obj</uri>
           </mesh>
         </geometry>
       </collision>
