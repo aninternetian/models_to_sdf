@@ -13,7 +13,7 @@
 Artist exports models with textures into one folder
 
 Folder contents:
-- Model base meshes (supports .dae or .obj)
+- Model base meshes (supports .obj only)
 - Model joints/wheels or parts meshes
 - Collision model meshes (low poly)
 - Model textures (recommended to use .png)
