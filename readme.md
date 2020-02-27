@@ -29,7 +29,7 @@ Sesto
 - SestoWheel.mtl
 - SestoWheel_Col.obj
 - SestoWheel_Col.mtl
-- Sesto.png (for consistency)
+- Sesto_Diffuse.png, etc
 
 Take note of the above:
 - Model and folder has the same name.
