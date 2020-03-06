@@ -1,5 +1,7 @@
 ## What this setup will do
 
+Folder structure based on the SDF requirements for the [Model Database Structure](http://gazebosim.org/tutorials?tut=model_structure&cat=build_robot)
+
 1. Manipulate folders:
 - copies contents from the original folder into the specified folder
 - move the contents into a created "meshes" folder
