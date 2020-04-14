@@ -8,6 +8,11 @@
 - Copies existing sdf from the script
 - Edits the sdf to the name of the folder and models
 
+## Export settings
+- Export using X forward, Z up in Blender.
+- Object facing X direction.
+- Overwrite collision material with Material_Col.mtl.
+
 ## Before using Example
 
 Artist exports models with textures into one folder
