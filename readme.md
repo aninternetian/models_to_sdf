@@ -1,5 +1,7 @@
 ## What this setup will do
 
+Folder structure based on the SDF requirements for the [Model Database Structure](http://gazebosim.org/tutorials?tut=model_structure&cat=build_robot)
+
 1. Manipulate folders:
 - copies contents from the original folder into the specified folder
 - move the contents into a created "meshes" folder
@@ -18,7 +20,7 @@
 Artist exports models with textures into one folder
 
 Folder contents:
-- Model base meshes (supports .dae or .obj)
+- Model base meshes (supports .obj only)
 - Model joints/wheels or parts meshes
 - Collision model meshes (low poly)
 - Model textures (recommended to use .png)
@@ -34,7 +36,7 @@ Sesto
 - SestoWheel.mtl
 - SestoWheel_Col.obj
 - SestoWheel_Col.mtl
-- textures.png (can be any name)
+- Sesto_Diffuse.png, etc
 
 Take note of the above:
 - Model and folder has the same name.
