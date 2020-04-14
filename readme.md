@@ -10,10 +10,10 @@ Folder structure based on the SDF requirements for the [Model Database Structure
 - Copies existing sdf from the script
 - Edits the sdf to the name of the folder and models
 
-## Export settings
-- Export using X forward, Z up in Blender.
-- Object facing X direction.
-- Overwrite collision material with Material_Col.mtl.
+## Recommended export settings
+- Export using Y forward, Z up in Blender.
+- Object facing front view in Blender.
+- Overwrite collision material with Material_Col.mtl. https://github.com/iamironcat/models_to_sdf/blob/master/templates/Material_Col.mtl
 
 ## Before using Example
 
