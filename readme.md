@@ -12,8 +12,8 @@ Folder structure based on the SDF requirements for the [Model Database Structure
 
 ## Recommended export settings
 - Export using Y forward, Z up in Blender.
-- Object facing front view in Blender.
-- Overwrite collision material with Material_Col.mtl. https://github.com/iamironcat/models_to_sdf/blob/master/templates/Material_Col.mtl
+- The "front" of the object is the side which gets interacted with robots. (Ie, handles of the wheelchair is to face the +X direction in Gazebo)
+- Make sure your "front" side of the object is facing the +X direction/forward.
 
 ## Before using Example
 
